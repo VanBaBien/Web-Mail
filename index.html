@@ -1026,28 +1026,6 @@
                         <span class="change-authform__click  change-login--auth">Đăng Nhập</span>
                     </div>
                     </form> 
-                  <script src="./assets/js/ValidatorForm"></script>
-                  <script>
-            
-                    //output
-                    Validator({
-                      form: '#form-1',
-                      formGroupSelector: '.form-group',
-                      errorSlector:'.form-message' ,
-                      rules:[
-                        Validator.isRequired('#fullname'),
-                        Validator.isEmail('#email'),
-                        Validator.isPass('#password',6),
-                        Validator.isRequired('#password_confirmation'),
-                        Validator.isPassConfirmation('#password_confirmation',function(){
-                          return  document.querySelector('#form-1 #password').value
-                        }, 'Mật khẩu nhập lại không chính xác'),
-                      ],
-                      onSubmit: function(data){
-                        console.log(data)
-                      }
-                    })
-                  </script>
                 </div>
     <!--login form-->
      <div class="main2">
@@ -1092,9 +1070,35 @@
             <span class="change-authform__click change-auth--login">Đăng Kí</span>
         </div>
           </form>
-          <script src="./assets/js/ValidatorForm.js"></script>
+    </div>
+        </div>
+       
+    </div>
+    </div>
+</body>
+    <script src="./assets/js/changeform.js"></script>
+     <script src="./assets/js/ValidatorForm.js"></script>
+                  <script>
+                    //output
+                    Validator({
+                      form: '#form-1',
+                      formGroupSelector: '.form-group',
+                      errorSlector:'.form-message' ,
+                      rules:[
+                        Validator.isRequired('#fullname'),
+                        Validator.isEmail('#email'),
+                        Validator.isPass('#password',6),
+                        Validator.isRequired('#password_confirmation'),
+                        Validator.isPassConfirmation('#password_confirmation',function(){
+                          return  document.querySelector('#form-1 #password').value
+                        }, 'Mật khẩu nhập lại không chính xác'),
+                      ],
+                      onSubmit: function(data){
+                        console.log(data)
+                      }
+                    })
+                  </script>
           <script>
-    
             //output
             Validator({
               form: '#form-2',
@@ -1114,12 +1118,5 @@
               }
             })
           </script>
-    </div>
-        </div>
-       
-    </div>
-    </div> 
-
-    <script src="./assets/js/changeform.js"></script>
-</body>
+        
 </html>
